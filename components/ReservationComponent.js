@@ -96,13 +96,13 @@ class Reservation extends Component {
                         color='#5637DD'                        
                         accessibilityLabel='Tap me to search for available campsites to reserve'
                     /> */}
-                    
+
                     {/* For iOS devices to properly display Button */}
                     <TouchableOpacity
-                        style={styles.iosButton}
+                        style={styles.buttonColor}
                         onPress={() => this.handleReservation()}
                         underlayColor='#fff'>
-                        <Text style={styles.iosText}>SEARCH</Text>
+                        <Text style={styles.buttonText}>SEARCH</Text>
                     </TouchableOpacity>
                 </View>
                 <Modal
@@ -138,8 +138,8 @@ class Reservation extends Component {
                                 this.resetForm();
                         }}
                             underlayColor='#fff'
-                            style={styles.iosButton}>
-                                <Text style={styles.iosText}>Close</Text>
+                            style={styles.buttonColor}>
+                                <Text style={styles.buttonText}>Close</Text>
                         </TouchableOpacity>
                     </View>
                 </Modal>
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         margin: 10
     },
-    iosButton:{
+    buttonColor:{
         marginRight:40,
         marginLeft:40,
         marginTop:10,
@@ -189,12 +189,12 @@ const styles = StyleSheet.create({
         borderRadius:10,
         borderWidth: 1,
         borderColor: '#fff'
-      },
-      iosText:{
-          color:'#fff',
-          textAlign:'center',
-          paddingLeft : 10,
-          paddingRight : 10
+    },
+    buttonText:{
+        color:'#fff',
+        textAlign:'center',
+        paddingLeft : 10,
+        paddingRight : 10
       }
 });
 
